@@ -1,0 +1,11 @@
+extends layout/layout.pug
+block main
+  table.Table
+    thead
+      tr.Table__column__header
+        th Fecha
+        th Referencia
+    tbody
+      tr.Table__column__data
+        td= data.fecha
+        td= data.referencia

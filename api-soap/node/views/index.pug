@@ -1,0 +1,17 @@
+extends layout/layout.pug
+block main
+  table.Table
+    thead
+      tr.Table__column__header
+        th Número
+        th Moneda
+    tbody
+      for money in data
+        tr.Table__column__data
+          td= money.moneda
+          td= money.descripcion
+  //- article.Card__container
+  //-   for money in data
+  //-     section.Card
+  //-       p.Card__moneda= money.moneda
+  //-       p.Card__descripcion= money.descripcion

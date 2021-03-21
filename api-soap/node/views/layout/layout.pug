@@ -1,0 +1,23 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="css/styles.css")
+    title= title
+  body
+    nav.Nav
+      ul.Menu
+        li: a(href='/') Tipo de Monedas
+        li.Menu__item: a(href='/').Menu__link Tipo de Monedas
+        li.Menu__item: a(href='/cambio_del_dia').Menu__link Cambio del Día
+        li.Menu__item: a(href='/cambio_hace_dias').Menu__link Cambio de 5 días atrás
+
+    header.Header
+      h1.Title= title
+    main.Main
+      block main
+
+    footer.Footer
+      p.Description Banco de Guatemala

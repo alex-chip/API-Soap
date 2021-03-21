@@ -1,0 +1,156 @@
+:root {
+  --primary-color: #1e5372;
+  --secondary-color: #e7e7e7;
+  --white-color: #FFF;
+  --gray-color: #333;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+p {
+  margin: 0;
+}
+
+tr {
+  line-height: 2.5;
+}
+
+th,
+td {
+  border-collapse: collapse;
+}
+
+.Header {
+}
+
+.Nav {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  display: flex;
+  justify-items: center;
+  padding: .5rem 0;
+  position: sticky;
+  top: 0;
+}
+
+.Menu {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+}
+
+.Menu__link {
+  padding: 1rem;
+  color: var(--white-color);
+  height: 100%;
+  display: block;
+  font-weight: bold;
+  transition: all .5s;
+}
+
+.Menu__link:hover {
+  text-decoration: underline;
+}
+
+.Title {
+  text-align: center;
+}
+
+.Main {
+  width: 80vw;
+  min-height: calc(100vh - 204px);
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+  padding: 1rem;
+}
+
+.Card__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem 2rem;
+}
+
+.Card {
+  transition: all .5s;
+  background-color: var(--white-color);
+  border-radius: .25rem;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  padding: 2rem 1rem;
+  box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.Card__moneda {
+  text-align: center;
+  padding-right: 1rem;
+  border-right: 1px solid #888;
+}
+
+.Card__descripcion {
+  text-align: center;
+}
+
+.Card:hover {
+  transform: scale(1.1);
+}
+
+
+.Table {
+  width: 500px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.Table__column__header {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+}
+
+.Table__column__data:nth-child(even) {
+  background-color: #ccc;
+}
+
+.Footer {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  text-align: center;
+  padding: 1rem 0;
+}

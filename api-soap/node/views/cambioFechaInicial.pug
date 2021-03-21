@@ -1,0 +1,14 @@
+extends layout/layout.pug
+block main
+  table.Table
+    thead
+      tr.Table__column__header
+        th Fecha
+        th Venta
+        th Compra
+    tbody
+      for money in data
+        tr.Table__column__data
+          td= money.fecha
+          td= money.venta
+          td= money.compra
