@@ -1,0 +1,176 @@
+html {
+  font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #333;
+}
+
+.container {
+  width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.Title {
+  text-align: center;
+}
+
+.container-tree {
+  text-align: center;
+  padding: 1rem;
+  width: 650px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(8, 80px);
+  grid-template-rows: repeat(7, 80px);
+  grid-template-areas:  ". . . . seis . . ."
+                        ". . . nueve . . . diesinueve"
+                        ". . diez . . . veinte ."
+                        ". dos . . . trece . ."
+                        "veintinueve . . . . . diesiocho ."
+                        ". veintiseis . . . veintitres . veinticuatro"
+                        "diesisiete . veintiocho . . . . .";
+  box-shadow: 0px 5px 8px 0px rgba(24, 105, 77, 0.2);
+}
+
+.circle {
+  margin: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  /* border: 1px solid steelblue; */
+  color: steelblue;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0px 5px 8px 0px rgba(24, 105, 77, 0.2);
+  animation: blur ease-out 1s forwards;
+  opacity: 0;
+}
+
+.seis {
+  grid-area: seis;
+  animation-delay: .1s;
+}
+.nueve {
+  grid-area: nueve;
+  animation-delay: 1s;
+}
+.diez {
+  grid-area: diez;
+  animation-delay: 2s;
+}
+
+.dos {
+  grid-area: dos;
+  animation-delay: 3s;
+}
+
+.veintinueve {
+  grid-area: veintinueve;
+  animation-delay: 4s;
+}
+
+.veintiseis {
+  grid-area: veintiseis;
+  animation-delay: 5s;
+}
+
+.diesisiete {
+  grid-area: diesisiete;
+  animation-delay: 6s;
+}
+
+.veintiocho {
+  grid-area: veintiocho;
+  animation-delay: 7s;
+}
+
+.diesinueve {
+  grid-area: diesinueve;
+  animation-delay: 8s;
+}
+
+.veinte {
+  grid-area: veinte;
+  animation-delay: 9s;
+}
+
+.trece {
+  grid-area: trece;
+  animation-delay: 10s;
+}
+
+.diesiocho {
+  grid-area: diesiocho;
+  animation-delay: 11s;
+}
+
+.veintitres {
+  grid-area: veintitres;
+  animation-delay: 12s;
+}
+
+.veinticuatro {
+  grid-area: veinticuatro;
+  animation-delay: 13s;
+}
+
+.circle::after {
+  content: "";
+  width: 1px;
+  height: 60px;
+  background: steelblue;
+  position: absolute;
+  top: -55%;
+  transform: rotate(50deg);
+}
+
+.nueve::after,
+.diez::after,
+.dos::after,
+.veintinueve::after,
+.diesisiete::after,
+.veinte::after,
+.trece::after,
+.veintitres::after {
+  left: 125%;
+}
+
+.veintiseis::after,
+.veintiocho::after,
+.diesiocho::after,
+.veinticuatro::after {
+  left: -35%;
+  transform: rotate(-50deg);
+}
+
+.diesinueve::after {
+  height: 195px;
+  top: -165%;
+  left: -160%;
+  transform: rotate(-70deg);
+}
+
+.seis::after {
+  display:none;
+}
+
+
+@keyframes blur {
+  to {
+    opacity: 1;
+  }
+}
